@@ -3,7 +3,7 @@
 **Execution**
 
 ```
-usage: main.py [-h] [-a {s,r}]
+usage: main.py [-h] -a {s,r}
 
 optional arguments:
   -h, --help  show this help message and exit
