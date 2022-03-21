@@ -1,6 +1,7 @@
 import argparse
 import imaplib
 import smtplib
+import sys
 
 from layout import *
 
@@ -29,8 +30,12 @@ def login_receive(username, password):
 def parse():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-a', dest='act', default='s', nargs=1, choices=['s', 'r'],
+    parser.add_argument('-a', dest='act', default='s', nargs=1, choices=['s', 'r'], required=True,
                         help="choose an option of program to do: send email (s) or receive email (r)")
+
+    #if len(sys.argv) == 1:
+    #    parser.print_help(sys.stderr)
+    #    sys.exit(1)
 
     return parser.parse_args()
 
